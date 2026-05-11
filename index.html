@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafetería Aroma</title>
+  <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+
+  <div class="hero">
+    <h1>Cafetería Aroma</h1>
+
+    <div class="buttons">
+      <button onclick="showSection('menu')">Menú</button>
+      <button onclick="showSection('about')">Sobre Nosotros</button>
+    </div>
+  </div>
+
+  <!-- MENÚ -->
+  <div id="menu" class="section">
+    <h2>Menú</h2>
+
+    <div class="menu-item">
+      <h3>Café Espresso</h3>
+      <p>$2.50</p>
+    </div>
+
+    <div class="menu-item">
+      <h3>Cappuccino</h3>
+      <p>$3.50</p>
+    </div>
+
+    <div class="menu-item">
+      <h3>Latte</h3>
+      <p>$3.80</p>
+    </div>
+
+    <div class="menu-item">
+      <h3>Mocaccino</h3>
+      <p>$4.00</p>
+    </div>
+
+    <div class="menu-item">
+      <h3>Té Premium</h3>
+      <p>$2.90</p>
+    </div>
+
+    <div class="menu-item">
+      <h3>Tostado Jamón y Queso</h3>
+      <p>$5.50</p>
+    </div>
+
+    <div class="menu-item">
+      <h3>Tarta de Manzana</h3>
+      <p>$4.20</p>
+    </div>
+
+    <div class="menu-item">
+      <h3>Cheesecake</h3>
+      <p>$4.80</p>
+    </div>
+    <div class="menu-item">
+      <h3>Medialunas</h3>
+      <p>$1.80</p>
+    </div>
+  </div>
+
+  <!-- SOBRE NOSOTROS -->
+  <div id="about" class="section">
+    <h2>Sobre Nosotros</h2>
+
+    <p>
+      En Cafetería Aroma creemos que cada taza de café cuenta una historia.
+      Desde nuestra apertura en 2024 trabajamos con pasión para ofrecer café
+      de excelente calidad, preparado con granos seleccionados y recetas artesanales.
+    </p>
+
+    <p>
+      Nuestro espacio fue creado para que cada cliente disfrute momentos únicos:
+      reuniones con amigos, desayunos tranquilos, tardes de estudio o simplemente
+      una pausa especial en el día.
+    </p>
+
+    <p>
+      Además de café, ofrecemos pastelería fresca, opciones saladas y atención
+      cálida en un ambiente moderno y acogedor.
+    </p>
+
+    <p>
+      ¡Gracias por elegirnos y ser parte de nuestra historia!
+    </p>
+  </div>
+
+  
+
+<!-- PROMOCIONES -->
+<div id="promo" class="section active">
+  <h2>⭐ Promociones</h2>
+
+  <div class="menu-item">
+    <h3>Café + Medialuna</h3>
+    <p>$4.00</p>
+  </div>
+
+  <div class="menu-item">
+    <h3>Desayuno Completo</h3>
+    <p>$7.50</p>
+  </div>
+
+  <div class="menu-item">
+    <h3>2 Cappuccinos + Cheesecake</h3>
+    <p>$10.00</p>
+  </div>
+</div>
+
+<!-- UBICACIÓN -->
+<div id="ubicacion" class="section active">
+  <h2>📍 Ubicación</h2>
+
+  <p>Libertad 925, Cañuelas, Buenos Aires, Argentina</p>
+
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18..."
+    width="100%"
+    height="300"
+    style="border:0; border-radius:15px; margin-top:20px;"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</div>
+
+<!--  CONTACTO  -->
+<div id="contacto" class="section active">
+  <h2>📞 Contacto</h2>
+
+  <div class="info-cards">
+
+    <div class="card-info">
+      <span>📱</span>
+      <h3>WhatsApp</h3>
+      <p>+54 11 2345-6789</p>
+    </div>
+
+    <div class="card-info">
+      <span>📷</span>
+      <h3>Instagram</h3>
+      <p>@cafeteriaaroma</p>
+    </div>
+
+    <div class="card-info">
+      <span>☎️</span>
+      <h3>Teléfono</h3>
+      <p>(011) 4567-8901</p>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- HORARIOS  -->
+<div id="horarios" class="section active">
+  <h2>⏰ Horarios</h2>
+
+  <div class="info-cards">
+
+    <div class="card-info">
+      <span>☀️</span>
+      <h3>Lunes a Viernes</h3>
+      <p>8:00 AM - 9:00 PM</p>
+    </div>
+
+    <div class="card-info">
+      <span>🌙</span>
+      <h3>Sábados</h3>
+      <p>9:00 AM - 11:00 PM</p>
+    </div>
+
+    <div class="card-info">
+      <span>🌤️</span>
+      <h3>Domingos</h3>
+      <p>9:00 AM - 6:00 PM</p>
+    </div>
+
+ 
+</div>
+  
+  </div>
+
+</div>
+</div>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+
+      sections.forEach(sec => sec.classList.remove('active'));
+
+      const target = document.getElementById(sectionId);
+      target.classList.add('active');
+
+      window.scrollTo({
+        top: target.offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+<a href="https://wa.me/541123456789" class="whatsapp-float" target="_blank">
+   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
+
+</body>
+</html>
