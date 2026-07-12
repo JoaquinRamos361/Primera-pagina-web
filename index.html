@@ -10,59 +10,67 @@
 
   <div class="hero">
     <h1>Cafetería Aroma</h1>
+    <p class="hero-subtitle">Café de especialidad en el corazón de Cañuelas</p>
 
-    <div class="buttons">
-      <button onclick="showSection('menu')">Menú</button>
-      <button onclick="showSection('about')">Sobre Nosotros</button>
-    </div>
+    <nav class="buttons">
+      <button onclick="showSection('menu')" class="nav-btn active" data-section="menu">Menú</button>
+      <button onclick="showSection('about')" class="nav-btn" data-section="about">Sobre Nosotros</button>
+      <button onclick="showSection('promo')" class="nav-btn" data-section="promo">Promociones</button>
+      <button onclick="showSection('ubicacion')" class="nav-btn" data-section="ubicacion">Ubicación</button>
+      <button onclick="showSection('contacto')" class="nav-btn" data-section="contacto">Contacto</button>
+      <button onclick="showSection('horarios')" class="nav-btn" data-section="horarios">Horarios</button>
+    </nav>
   </div>
 
   <!-- MENÚ -->
-  <div id="menu" class="section">
+  <div id="menu" class="section active">
     <h2>Menú</h2>
 
-    <div class="menu-item">
-      <h3>Café Espresso</h3>
-      <p>$2.50</p>
-    </div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <h3>Café Espresso</h3>
+        <p>$2.50</p>
+      </div>
 
-    <div class="menu-item">
-      <h3>Cappuccino</h3>
-      <p>$3.50</p>
-    </div>
+      <div class="menu-item">
+        <h3>Cappuccino</h3>
+        <p>$3.50</p>
+      </div>
 
-    <div class="menu-item">
-      <h3>Latte</h3>
-      <p>$3.80</p>
-    </div>
+      <div class="menu-item">
+        <h3>Latte</h3>
+        <p>$3.80</p>
+      </div>
 
-    <div class="menu-item">
-      <h3>Mocaccino</h3>
-      <p>$4.00</p>
-    </div>
+      <div class="menu-item">
+        <h3>Mocaccino</h3>
+        <p>$4.00</p>
+      </div>
 
-    <div class="menu-item">
-      <h3>Té Premium</h3>
-      <p>$2.90</p>
-    </div>
+      <div class="menu-item">
+        <h3>Té Premium</h3>
+        <p>$2.90</p>
+      </div>
 
-    <div class="menu-item">
-      <h3>Tostado Jamón y Queso</h3>
-      <p>$5.50</p>
-    </div>
+      <div class="menu-item">
+        <h3>Tostado Jamón y Queso</h3>
+        <p>$5.50</p>
+      </div>
 
-    <div class="menu-item">
-      <h3>Tarta de Manzana</h3>
-      <p>$4.20</p>
-    </div>
+      <div class="menu-item">
+        <h3>Tarta de Manzana</h3>
+        <p>$4.20</p>
+      </div>
 
-    <div class="menu-item">
-      <h3>Cheesecake</h3>
-      <p>$4.80</p>
-    </div>
-    <div class="menu-item">
-      <h3>Medialunas</h3>
-      <p>$1.80</p>
+      <div class="menu-item">
+        <h3>Cheesecake</h3>
+        <p>$4.80</p>
+      </div>
+
+      <div class="menu-item">
+        <h3>Medialunas</h3>
+        <p>$1.80</p>
+      </div>
     </div>
   </div>
 
@@ -92,122 +100,180 @@
     </p>
   </div>
 
-  
+  <!-- PROMOCIONES -->
+  <div id="promo" class="section">
+    <h2>⭐ Promociones</h2>
 
-<!-- PROMOCIONES -->
-<div id="promo" class="section active">
-  <h2>⭐ Promociones</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <h3>Café + Medialuna</h3>
+        <p>$4.00</p>
+      </div>
 
-  <div class="menu-item">
-    <h3>Café + Medialuna</h3>
-    <p>$4.00</p>
+      <div class="menu-item">
+        <h3>Desayuno Completo</h3>
+        <p>$7.50</p>
+      </div>
+
+      <div class="menu-item">
+        <h3>2 Cappuccinos + Cheesecake</h3>
+        <p>$10.00</p>
+      </div>
+    </div>
   </div>
 
-  <div class="menu-item">
-    <h3>Desayuno Completo</h3>
-    <p>$7.50</p>
+  <!-- UBICACIÓN -->
+  <div id="ubicacion" class="section">
+    <h2>📍 Ubicación</h2>
+
+    <p class="location-address">Libertad 925, Cañuelas, Buenos Aires, Argentina</p>
+
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18..."
+      width="100%"
+      height="300"
+      style="border:0; border-radius:15px; margin-top:20px;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
   </div>
 
-  <div class="menu-item">
-    <h3>2 Cappuccinos + Cheesecake</h3>
-    <p>$10.00</p>
-  </div>
-</div>
+  <!-- CONTACTO -->
+  <div id="contacto" class="section">
+    <h2>📞 Contacto</h2>
 
-<!-- UBICACIÓN -->
-<div id="ubicacion" class="section active">
-  <h2>📍 Ubicación</h2>
+    <div class="info-cards">
+      <div class="card-info">
+        <span>📱</span>
+        <h3>WhatsApp</h3>
+        <p>+54 11 2345-6789</p>
+      </div>
 
-  <p>Libertad 925, Cañuelas, Buenos Aires, Argentina</p>
+      <div class="card-info">
+        <span>📷</span>
+        <h3>Instagram</h3>
+        <p>@cafeteriaaroma</p>
+      </div>
 
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18..."
-    width="100%"
-    height="300"
-    style="border:0; border-radius:15px; margin-top:20px;"
-    allowfullscreen=""
-    loading="lazy">
-  </iframe>
-</div>
-
-<!--  CONTACTO  -->
-<div id="contacto" class="section active">
-  <h2>📞 Contacto</h2>
-
-  <div class="info-cards">
-
-    <div class="card-info">
-      <span>📱</span>
-      <h3>WhatsApp</h3>
-      <p>+54 11 2345-6789</p>
+      <div class="card-info">
+        <span>☎️</span>
+        <h3>Teléfono</h3>
+        <p>(011) 4567-8901</p>
+      </div>
     </div>
 
-    <div class="card-info">
-      <span>📷</span>
-      <h3>Instagram</h3>
-      <p>@cafeteriaaroma</p>
-    </div>
+    <!-- FORMULARIO DE RESERVA -->
+    <form class="reservation-form" id="reservationForm">
+      <h3>Reservá tu mesa</h3>
 
-    <div class="card-info">
-      <span>☎️</span>
-      <h3>Teléfono</h3>
-      <p>(011) 4567-8901</p>
-    </div>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
 
-  </div>
-</div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="tunombre@email.com" required>
+        </div>
 
+        <div class="form-field">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="11 2345-6789">
+        </div>
 
-<!-- HORARIOS  -->
-<div id="horarios" class="section active">
-  <h2>⏰ Horarios</h2>
+        <div class="form-field">
+          <label for="personas">Personas</label>
+          <select id="personas" name="personas" required>
+            <option value="" disabled selected>Elegí una opción</option>
+            <option value="1">1 persona</option>
+            <option value="2">2 personas</option>
+            <option value="3">3 personas</option>
+            <option value="4">4 personas</option>
+            <option value="5+">5 o más</option>
+          </select>
+        </div>
 
-  <div class="info-cards">
+        <div class="form-field">
+          <label for="fecha">Fecha</label>
+          <input type="date" id="fecha" name="fecha" required>
+        </div>
 
-    <div class="card-info">
-      <span>☀️</span>
-      <h3>Lunes a Viernes</h3>
-      <p>8:00 AM - 9:00 PM</p>
-    </div>
+        <div class="form-field">
+          <label for="hora">Hora</label>
+          <input type="time" id="hora" name="hora" required>
+        </div>
 
-    <div class="card-info">
-      <span>🌙</span>
-      <h3>Sábados</h3>
-      <p>9:00 AM - 11:00 PM</p>
-    </div>
+        <div class="form-field form-field-full">
+          <label for="mensaje">Mensaje (opcional)</label>
+          <textarea id="mensaje" name="mensaje" rows="3" placeholder="¿Alguna preferencia o pedido especial?"></textarea>
+        </div>
+      </div>
 
-    <div class="card-info">
-      <span>🌤️</span>
-      <h3>Domingos</h3>
-      <p>9:00 AM - 6:00 PM</p>
-    </div>
-
- 
-</div>
-  
+      <button type="submit" class="submit-btn">Enviar reserva</button>
+      <p class="form-confirmation" id="formConfirmation"></p>
+    </form>
   </div>
 
-</div>
-</div>
+  <!-- HORARIOS -->
+  <div id="horarios" class="section">
+    <h2>⏰ Horarios</h2>
+
+    <div class="info-cards">
+      <div class="card-info">
+        <span>☀️</span>
+        <h3>Lunes a Viernes</h3>
+        <p>8:00 AM - 9:00 PM</p>
+      </div>
+
+      <div class="card-info">
+        <span>🌙</span>
+        <h3>Sábados</h3>
+        <p>9:00 AM - 11:00 PM</p>
+      </div>
+
+      <div class="card-info">
+        <span>🌤️</span>
+        <h3>Domingos</h3>
+        <p>9:00 AM - 6:00 PM</p>
+      </div>
+    </div>
+  </div>
 
   <script>
     function showSection(sectionId) {
       const sections = document.querySelectorAll('.section');
-
       sections.forEach(sec => sec.classList.remove('active'));
 
       const target = document.getElementById(sectionId);
       target.classList.add('active');
+
+      const navButtons = document.querySelectorAll('.nav-btn');
+      navButtons.forEach(btn => btn.classList.remove('active'));
+      document.querySelector(`.nav-btn[data-section="${sectionId}"]`).classList.add('active');
 
       window.scrollTo({
         top: target.offsetTop,
         behavior: 'smooth'
       });
     }
+
+    const reservationForm = document.getElementById('reservationForm');
+    const formConfirmation = document.getElementById('formConfirmation');
+
+    reservationForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      formConfirmation.textContent = '¡Gracias! Tu reserva fue enviada, te contactaremos para confirmarla.';
+      reservationForm.reset();
+    });
   </script>
-<a href="https://wa.me/541123456789" class="whatsapp-float" target="_blank">
-   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-</a>
+
+  <a href="https://wa.me/541123456789" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white">
+      <path d="M16.004 3C9.377 3 4 8.373 4 15c0 2.34.66 4.523 1.803 6.383L4 29l7.86-1.76A11.94 11.94 0 0 0 16.004 27C22.63 27 28 21.627 28 15S22.63 3 16.004 3zm0 21.75a9.7 9.7 0 0 1-4.95-1.36l-.355-.21-4.663 1.045 1.02-4.55-.232-.372A9.68 9.68 0 0 1 5.25 15c0-5.93 4.824-10.75 10.754-10.75S26.75 9.07 26.75 15 21.934 24.75 16.004 24.75z"/>
+      <path d="M21.62 17.51c-.303-.152-1.79-.883-2.067-.984-.277-.101-.478-.152-.68.152-.202.303-.78.984-.956 1.187-.176.202-.353.227-.655.076-.303-.152-1.278-.47-2.434-1.502-.9-.803-1.507-1.796-1.684-2.099-.176-.303-.019-.467.133-.618.137-.136.303-.353.454-.53.152-.176.202-.303.303-.505.101-.202.05-.379-.025-.53-.076-.152-.68-1.638-.932-2.243-.245-.588-.494-.508-.68-.518l-.58-.01c-.202 0-.53.076-.807.379-.277.303-1.06 1.036-1.06 2.523s1.085 2.925 1.236 3.128c.152.202 2.135 3.26 5.174 4.572.723.312 1.286.498 1.726.638.725.23 1.384.198 1.906.12.581-.087 1.79-.732 2.042-1.44.253-.707.253-1.313.177-1.44-.076-.126-.278-.202-.58-.354z"/>
+    </svg>
+  </a>
 
 </body>
 </html>
